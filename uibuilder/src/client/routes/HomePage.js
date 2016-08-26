@@ -44,19 +44,18 @@ class HomePage extends Component {
                             params={ this.props.params }
                             location={ this.props.location }>
                     <small params={ this.props.params } location={ this.props.location }>Welcome to</small>
-                    <Image src="http://lorempixel.com/600/337/nature/"
-                           rounded={ false }
-                           circle={ true }
-                           thumbnail={ true }
-                           style={ { width: '100px', height: '100px', cssFloat: 'right' } }
-                           params={ this.props.params }
-                           location={ this.props.location }></Image>
                     <PageHeader style={ { fontFamily: 'awesome' } }
                                 params={ this.props.params }
                                 location={ this.props.location }>
-                        <span style={ {  } }
-                              params={ this.props.params }
-                              location={ this.props.location }>Code Connect</span>
+                        <Image src="https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png"
+                               rounded={ false }
+                               circle={ false }
+                               thumbnail={ false }
+                               style={ { width: '100px', height: '100px', verticalAlign: 'top', marginRight: '20px' } }
+                               params={ this.props.params }
+                               location={ this.props.location }></Image><span style={ { fontSize: '90px' } }
+                                                                                                                                                                  params={ this.props.params }
+                                                                                                                                                                  location={ this.props.location }>Code Connect</span>
                     </PageHeader>
                 </PageHeader>
                 <h3 style={ { padding: '1em', textAlign: 'center' } }

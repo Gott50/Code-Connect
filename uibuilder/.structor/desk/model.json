@@ -73,21 +73,6 @@
               "text": "Welcome to"
             },
             {
-              "variantName": "circle",
-              "type": "Image",
-              "props": {
-                "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.",
-                "rounded": false,
-                "circle": true,
-                "thumbnail": true,
-                "style": {
-                  "width": "100px",
-                  "height": "100px",
-                  "cssFloat": "right"
-                }
-              }
-            },
-            {
               "variantName": "default",
               "type": "PageHeader",
               "props": {
@@ -97,9 +82,28 @@
               },
               "children": [
                 {
+                  "variantName": "circle",
+                  "type": "Image",
+                  "props": {
+                    "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png",
+                    "rounded": false,
+                    "circle": false,
+                    "thumbnail": false,
+                    "style": {
+                      "width": "100px",
+                      "height": "100px",
+                      "cssFloat": "",
+                      "verticalAlign": "top",
+                      "marginRight": "20px"
+                    }
+                  }
+                },
+                {
                   "type": "span",
                   "props": {
-                    "style": {}
+                    "style": {
+                      "fontSize": "90px"
+                    }
                   },
                   "children": [],
                   "text": "Code Connect"
