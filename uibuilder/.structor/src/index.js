@@ -33,5 +33,8 @@ module.exports = {
         Alert: require('react-bootstrap').Alert,
         Jumbotron: require('react-bootstrap').Jumbotron,
         PageHeader: require('react-bootstrap').PageHeader
+    },
+    Test: {
+        TestPanel: require('../../src/client/controllers/Test/TestPanel/TestPanel.jsx')
     }
 };

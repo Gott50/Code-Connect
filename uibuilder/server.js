@@ -11,6 +11,10 @@ app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(rewrite('/*', '/index.html'));
 app.use('/', express.static(path.join(__dirname, 'public')));
 
+app.get('/hallo', function(req, res){
+res.send("sfdsdfas");
+});
+
 app.listen(app.get('port'), function() {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
 });

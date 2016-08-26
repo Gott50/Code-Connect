@@ -7,6 +7,7 @@ import { Pagination } from 'react-bootstrap';
 import { Pager } from 'react-bootstrap';
 import { PageItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
+import TestPanel from '../controllers/Test/TestPanel/TestPanel.jsx';
 
 
 class YourTasks extends Component {
@@ -130,6 +131,7 @@ class YourTasks extends Component {
                         location={ this.props.location }>
                     <span params={ this.props.params } location={ this.props.location }>Submit</span>
                 </Button>
+                <TestPanel params={ this.props.params } location={ this.props.location }></TestPanel>
             </div>
             );
     }
