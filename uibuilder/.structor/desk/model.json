@@ -76,7 +76,7 @@
               "variantName": "circle",
               "type": "Image",
               "props": {
-                "src": "/CClogo.png",
+                "src": "http://github.com/Gott50/Code-Connect/blob/master/uibuilder/src/client/assets/CClogo.png",
                 "rounded": false,
                 "circle": true,
                 "thumbnail": true,
