@@ -73,10 +73,27 @@
               "text": "Welcome to"
             },
             {
+              "variantName": "circle",
+              "type": "Image",
+              "props": {
+                "src": "http://lorempixel.com/600/337/nature/",
+                "rounded": false,
+                "circle": true,
+                "thumbnail": true,
+                "style": {
+                  "width": "100px",
+                  "height": "100px",
+                  "cssFloat": "right"
+                }
+              }
+            },
+            {
               "variantName": "default",
               "type": "PageHeader",
               "props": {
-                "style": {}
+                "style": {
+                  "fontFamily": "awesome"
+                }
               },
               "children": [
                 {
