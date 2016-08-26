@@ -7,6 +7,7 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Input } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 
 
@@ -15,7 +16,31 @@ class HomePage extends Component {
     render() {
         return (
             <div>
-                <PageHeader style={ { textAlign: 'center' } }
+                <nav style={ { marginBottom: '6em' } }
+                     params={ this.props.params }
+                     location={ this.props.location }>
+                    <IndexLink to="/:name"
+                               style={ {  } }
+                               params={ this.props.params }
+                               location={ this.props.location }>
+                        <Image src="http://lorempixel.com/600/337/nature/"
+                               rounded={ false }
+                               circle={ true }
+                               thumbnail={ true }
+                               style={ { width: '100px', height: '100px', cssFloat: 'right' } }
+                               params={ this.props.params }
+                               location={ this.props.location }></Image>
+                    </IndexLink>
+                    <IndexLink to="/home"
+                               style={ {  } }
+                               params={ this.props.params }
+                               location={ this.props.location }>
+                        <p params={ this.props.params } location={ this.props.location }>
+                            <span params={ this.props.params } location={ this.props.location }>Home</span>
+                        </p>
+                    </IndexLink>
+                </nav>
+                <PageHeader style={ { textAlign: 'center', marginTop: '1em' } }
                             params={ this.props.params }
                             location={ this.props.location }>
                     <small params={ this.props.params } location={ this.props.location }>Welcome to</small>
@@ -46,11 +71,12 @@ class HomePage extends Component {
                         <IndexLink to="/projects"
                                    params={ this.props.params }
                                    location={ this.props.location }>
-                            <Button bsStyle="default"
+                            <Button bsStyle="success"
                                     style={ { textAlign: 'center', cssFloat: 'right' } }
+                                    bsSize="large"
                                     params={ this.props.params }
                                     location={ this.props.location }>
-                                <span params={ this.props.params } location={ this.props.location }>find a Project to contribute on</span>
+                                <span params={ this.props.params } location={ this.props.location }>find a Project to contribute to</span>
                             </Button>
                         </IndexLink>
                         </Col>
@@ -63,8 +89,11 @@ class HomePage extends Component {
                         <IndexLink to="/mentor"
                                    params={ this.props.params }
                                    location={ this.props.location }>
-                            <Button bsStyle="default"
+                            <Button bsStyle="warning"
                                     style={ { textAlign: 'center' } }
+                                    block={ false }
+                                    bsSize="large"
+                                    disabled={ true }
                                     params={ this.props.params }
                                     location={ this.props.location }>
                                 <span params={ this.props.params } location={ this.props.location }>add your own Project to Mentor</span>
@@ -73,12 +102,6 @@ class HomePage extends Component {
                         </Col>
                     </Row>
                 </Grid>
-                <Col xs={ 3 }
-                     md={ 3 }
-                     sm={ 3 }
-                     lg={ 3 }
-                     params={ this.props.params }
-                     location={ this.props.location }></Col>
             </div>
             );
     }

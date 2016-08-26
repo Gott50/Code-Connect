@@ -85,7 +85,7 @@
                     "style": {}
                   },
                   "children": [],
-                  "text": "Code Connects"
+                  "text": "Code Connect"
                 }
               ]
             }
@@ -138,16 +138,17 @@
                         {
                           "type": "Button",
                           "props": {
-                            "bsStyle": "default",
+                            "bsStyle": "success",
                             "style": {
                               "textAlign": "center",
                               "cssFloat": "right"
-                            }
+                            },
+                            "bsSize": "large"
                           },
                           "children": [
                             {
                               "type": "span",
-                              "text": "find a Project to contribute on",
+                              "text": "find a Project to contribute to",
                               "props": {},
                               "componentName": null
                             }
@@ -176,10 +177,13 @@
                         {
                           "type": "Button",
                           "props": {
-                            "bsStyle": "default",
+                            "bsStyle": "warning",
                             "style": {
                               "textAlign": "center"
-                            }
+                            },
+                            "block": false,
+                            "bsSize": "large",
+                            "disabled": true
                           },
                           "children": [
                             {

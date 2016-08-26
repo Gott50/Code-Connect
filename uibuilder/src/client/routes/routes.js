@@ -18,7 +18,7 @@ export default function() {
                 <Route path="/home" component={ HomePage } />
                 <Route path="/projects" component={ Projects } />
                 <Route path="/opentasks" component={ OpenTasks } />
-                <Route path="/yourtasks/:name" component={ YourTasks } />
+                <Route path="/:name" component={ YourTasks } />
                 <Route path="/mentor" component={ MentorLandingPage } />
                 <Route path="*" component={ HomePage } />
             </Route>
