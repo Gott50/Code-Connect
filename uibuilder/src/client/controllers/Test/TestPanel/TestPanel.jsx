@@ -27,8 +27,8 @@ class TestPanel extends Component {
   }
 
     handleOnClick(e) {
-        console.log("Fuck MAN!");
-        
+        console.log("Ohh, Fuck MAN!");
+
         e.stopPropagation();
         e.preventDefault();
         //

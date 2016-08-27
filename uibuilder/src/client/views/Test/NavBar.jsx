@@ -5,8 +5,9 @@ import { NavbarHeader, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react
 
 const NavBar = () => (
     <Navbar inverse>
-        <Navbar.Header>
-          <Navbar.Brand>
+
+        <Navbar.Header pullLeft>
+          <Navbar.Brand style={ { fontFamily: 'awesome' } }>
              <a  href="/home">Code Connect</a>
           </Navbar.Brand>
             <Navbar.Toggle />
@@ -29,7 +30,7 @@ const NavBar = () => (
                     <MenuItem href="/yourtasks">
                         Your Tasks
                     </MenuItem>
-                    <MenuItem href="/yourtasks">
+                    <MenuItem href="/yourproject">
                         Your Project
                     </MenuItem>
 
