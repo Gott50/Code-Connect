@@ -7,7 +7,7 @@ import { ListGroupItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 
 
-class OpenTasks extends Component {
+class YourProject extends Component {
 
     render() {
         return (
@@ -144,5 +144,5 @@ class OpenTasks extends Component {
     }
 }
 
-export default OpenTasks;
+export default YourProject;
 

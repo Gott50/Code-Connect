@@ -7,8 +7,10 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Input } from 'react-bootstrap';
+import { Tab } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
+import NavBar from '../views/Test/NavBar.jsx';
 
 
 class HomePage extends Component {
@@ -16,6 +18,7 @@ class HomePage extends Component {
     render() {
         return (
             <div>
+                <NavBar params={ this.props.params } location={ this.props.location }></NavBar>
                 <nav style={ { marginBottom: '6em' } }
                      params={ this.props.params }
                      location={ this.props.location }>
@@ -40,23 +43,22 @@ class HomePage extends Component {
                         </p>
                     </IndexLink>
                 </nav>
-                <PageHeader style={ { textAlign: 'center', marginTop: '1em' } }
+                <PageHeader style={ { fontFamily: 'awesome', textAlign: 'center' } }
                             params={ this.props.params }
                             location={ this.props.location }>
-                    <small params={ this.props.params } location={ this.props.location }>Welcome to</small>
-                    <PageHeader style={ { fontFamily: 'awesome' } }
-                                params={ this.props.params }
-                                location={ this.props.location }>
-                        <Image src="https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png"
-                               rounded={ false }
-                               circle={ false }
-                               thumbnail={ false }
-                               style={ { width: '100px', height: '100px', verticalAlign: 'top', marginRight: '20px' } }
-                               params={ this.props.params }
-                               location={ this.props.location }></Image><span style={ { fontSize: '90px' } }
-                                                                                                                                                                  params={ this.props.params }
-                                                                                                                                                                  location={ this.props.location }>Code Connect</span>
-                    </PageHeader>
+                    <small style={ {  } }
+                           params={ this.props.params }
+                           location={ this.props.location }>Welcome to</small>
+                    <Tab params={ this.props.params } location={ this.props.location }></Tab>
+                    <Image src="https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png"
+                           rounded={ false }
+                           circle={ false }
+                           thumbnail={ false }
+                           style={ { width: '100px', height: '100px', verticalAlign: 'top', marginRight: '20px' } }
+                           params={ this.props.params }
+                           location={ this.props.location }></Image><span style={ { fontSize: '90px' } }
+                                                                                                                                                              params={ this.props.params }
+                                                                                                                                                              location={ this.props.location }>Code Connect</span>
                 </PageHeader>
                 <h3 style={ { padding: '1em', textAlign: 'center' } }
                     params={ this.props.params }
@@ -74,7 +76,7 @@ class HomePage extends Component {
                              lg={ 6 }
                              params={ this.props.params }
                              location={ this.props.location }>
-                        <IndexLink to="/projects"
+                        <IndexLink to="/contributor"
                                    params={ this.props.params }
                                    location={ this.props.location }>
                             <Button bsStyle="success"

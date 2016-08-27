@@ -5,6 +5,9 @@
       "pagePath": "/home",
       "children": [
         {
+          "type": "NavBar"
+        },
+        {
           "type": "nav",
           "children": [
             {
@@ -61,54 +64,48 @@
           "type": "PageHeader",
           "props": {
             "style": {
-              "textAlign": "center",
-              "marginTop": "1em"
+              "fontFamily": "awesome",
+              "textAlign": "center"
             }
           },
           "children": [
             {
               "type": "small",
-              "props": {},
+              "props": {
+                "style": {}
+              },
               "children": [],
               "text": "Welcome to"
             },
             {
-              "variantName": "default",
-              "type": "PageHeader",
+              "type": "Tab"
+            },
+            {
+              "variantName": "circle",
+              "type": "Image",
+              "props": {
+                "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png",
+                "rounded": false,
+                "circle": false,
+                "thumbnail": false,
+                "style": {
+                  "width": "100px",
+                  "height": "100px",
+                  "cssFloat": "",
+                  "verticalAlign": "top",
+                  "marginRight": "20px"
+                }
+              }
+            },
+            {
+              "type": "span",
               "props": {
                 "style": {
-                  "fontFamily": "awesome"
+                  "fontSize": "90px"
                 }
               },
-              "children": [
-                {
-                  "variantName": "circle",
-                  "type": "Image",
-                  "props": {
-                    "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png",
-                    "rounded": false,
-                    "circle": false,
-                    "thumbnail": false,
-                    "style": {
-                      "width": "100px",
-                      "height": "100px",
-                      "cssFloat": "",
-                      "verticalAlign": "top",
-                      "marginRight": "20px"
-                    }
-                  }
-                },
-                {
-                  "type": "span",
-                  "props": {
-                    "style": {
-                      "fontSize": "90px"
-                    }
-                  },
-                  "children": [],
-                  "text": "Code Connect"
-                }
-              ]
+              "children": [],
+              "text": "Code Connect"
             }
           ]
         },
@@ -153,7 +150,7 @@
                     {
                       "type": "IndexLink",
                       "props": {
-                        "to": "/projects"
+                        "to": "/contributor"
                       },
                       "children": [
                         {
@@ -230,8 +227,8 @@
       ]
     },
     {
-      "pageName": "Projects",
-      "pagePath": "/projects",
+      "pageName": "Contributor",
+      "pagePath": "/contributor",
       "children": [
         {
           "variantName": "default",
@@ -395,8 +392,8 @@
       ]
     },
     {
-      "pageName": "OpenTasks",
-      "pagePath": "/opentasks",
+      "pageName": "YourProject",
+      "pagePath": "/yourproject",
       "children": [
         {
           "variantName": "default",
@@ -771,7 +768,7 @@
     },
     {
       "pageName": "YourTasks",
-      "pagePath": "/:name",
+      "pagePath": "/yourtasks",
       "children": [
         {
           "variantName": "default",

@@ -35,6 +35,7 @@ module.exports = {
         PageHeader: require('react-bootstrap').PageHeader
     },
     Test: {
-        TestPanel: require('../../src/client/controllers/Test/TestPanel/TestPanel.jsx')
+        TestPanel: require('../../src/client/controllers/Test/TestPanel/TestPanel.jsx'),
+        NavBar: require('../../src/client/views/Test/NavBar.jsx')
     }
 };

@@ -7,7 +7,7 @@ import { ListGroupItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 
 
-class Projects extends Component {
+class Contributor extends Component {
 
     render() {
         return (
@@ -73,5 +73,5 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default Contributor;
 

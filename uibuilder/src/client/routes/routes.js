@@ -4,8 +4,8 @@ import React from 'react';
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
 import { createHistory } from 'history';
 import HomePage from './HomePage.js';
-import Projects from './Projects.js';
-import OpenTasks from './OpenTasks.js';
+import Contributor from './Contributor.js';
+import YourProject from './YourProject.js';
 import YourTasks from './YourTasks.js';
 import MentorLandingPage from './MentorLandingPage.js';
 
@@ -16,9 +16,9 @@ export default function() {
             <Route path="/" component="div">
                 <IndexRoute component={ HomePage } />
                 <Route path="/home" component={ HomePage } />
-                <Route path="/projects" component={ Projects } />
-                <Route path="/opentasks" component={ OpenTasks } />
-                <Route path="/:name" component={ YourTasks } />
+                <Route path="/contributor" component={ Contributor } />
+                <Route path="/yourproject" component={ YourProject } />
+                <Route path="/yourtasks" component={ YourTasks } />
                 <Route path="/mentor" component={ MentorLandingPage } />
                 <Route path="*" component={ HomePage } />
             </Route>
