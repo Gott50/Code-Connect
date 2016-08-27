@@ -19,30 +19,6 @@ class HomePage extends Component {
         return (
             <div>
                 <NavBar params={ this.props.params } location={ this.props.location }></NavBar>
-                <nav style={ { marginBottom: '6em' } }
-                     params={ this.props.params }
-                     location={ this.props.location }>
-                    <IndexLink to="/:name"
-                               style={ {  } }
-                               params={ this.props.params }
-                               location={ this.props.location }>
-                        <Image src="http://lorempixel.com/600/337/nature/"
-                               rounded={ false }
-                               circle={ true }
-                               thumbnail={ true }
-                               style={ { width: '100px', height: '100px', cssFloat: 'right' } }
-                               params={ this.props.params }
-                               location={ this.props.location }></Image>
-                    </IndexLink>
-                    <IndexLink to="/home"
-                               style={ {  } }
-                               params={ this.props.params }
-                               location={ this.props.location }>
-                        <p params={ this.props.params } location={ this.props.location }>
-                            <span params={ this.props.params } location={ this.props.location }>Home</span>
-                        </p>
-                    </IndexLink>
-                </nav>
                 <PageHeader style={ { fontFamily: 'awesome', textAlign: 'center' } }
                             params={ this.props.params }
                             location={ this.props.location }>

@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 import { Input } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
+import NavBar from '../views/Test/NavBar.jsx';
 
 
 class MentorLandingPage extends Component {
@@ -10,6 +11,7 @@ class MentorLandingPage extends Component {
     render() {
         return (
             <div>
+                <NavBar params={ this.props.params } location={ this.props.location }></NavBar>
                 <PageHeader style={ { textAlign: 'center' } }
                             params={ this.props.params }
                             location={ this.props.location }>

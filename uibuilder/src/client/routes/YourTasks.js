@@ -8,6 +8,7 @@ import { Pager } from 'react-bootstrap';
 import { PageItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 import TestPanel from '../controllers/Test/TestPanel/TestPanel.jsx';
+import NavBar from '../views/Test/NavBar.jsx';
 
 
 class YourTasks extends Component {
@@ -15,6 +16,7 @@ class YourTasks extends Component {
     render() {
         return (
             <div>
+                <NavBar params={ this.props.params } location={ this.props.location }></NavBar>
                 <PageHeader style={ { textAlign: 'center' } }
                             params={ this.props.params }
                             location={ this.props.location }>

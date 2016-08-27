@@ -4,11 +4,11 @@ import { NavbarHeader, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react
 
 
 const NavBar = () => (
-    <Navbar>
+    <Navbar inverse>
         <Navbar.Header>
-            <Navbar.Brand>
-                <a href="/home">Code Connect</a>
-            </Navbar.Brand>
+          <Navbar.Brand>
+             <a  href="/home">Code Connect</a>
+          </Navbar.Brand>
             <Navbar.Toggle />
         </Navbar.Header>
 
@@ -20,6 +20,7 @@ const NavBar = () => (
                 <NavItem href="/mentor">
                     Mentor
                 </NavItem>
+
             </Nav>
 
             <Nav pullRight>

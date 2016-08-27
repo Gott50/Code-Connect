@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
+import NavBar from '../views/Test/NavBar.jsx';
 
 
 class YourProject extends Component {
@@ -12,6 +13,7 @@ class YourProject extends Component {
     render() {
         return (
             <div>
+                <NavBar params={ this.props.params } location={ this.props.location }></NavBar>
                 <PageHeader style={ { textAlign: 'center' } }
                             params={ this.props.params }
                             location={ this.props.location }>

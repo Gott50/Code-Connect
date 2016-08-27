@@ -8,58 +8,6 @@
           "type": "NavBar"
         },
         {
-          "type": "nav",
-          "children": [
-            {
-              "type": "IndexLink",
-              "props": {
-                "to": "/:name",
-                "style": {}
-              },
-              "children": [
-                {
-                  "variantName": "circle",
-                  "type": "Image",
-                  "props": {
-                    "src": "http://lorempixel.com/600/337/nature/",
-                    "rounded": false,
-                    "circle": true,
-                    "thumbnail": true,
-                    "style": {
-                      "width": "100px",
-                      "height": "100px",
-                      "cssFloat": "right"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "IndexLink",
-              "props": {
-                "to": "/home",
-                "style": {}
-              },
-              "children": [
-                {
-                  "type": "p",
-                  "children": [
-                    {
-                      "type": "span",
-                      "text": "Home"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "props": {
-            "style": {
-              "marginBottom": "6em"
-            }
-          }
-        },
-        {
           "variantName": "default",
           "type": "PageHeader",
           "props": {
@@ -231,6 +179,9 @@
       "pagePath": "/contributor",
       "children": [
         {
+          "type": "NavBar"
+        },
+        {
           "variantName": "default",
           "type": "PageHeader",
           "props": {
@@ -395,6 +346,9 @@
       "pageName": "YourProject",
       "pagePath": "/yourproject",
       "children": [
+        {
+          "type": "NavBar"
+        },
         {
           "variantName": "default",
           "type": "PageHeader",
@@ -771,6 +725,9 @@
       "pagePath": "/yourtasks",
       "children": [
         {
+          "type": "NavBar"
+        },
+        {
           "variantName": "default",
           "type": "PageHeader",
           "props": {
@@ -1088,6 +1045,9 @@
       "pageName": "MentorLandingPage",
       "pagePath": "/mentor",
       "children": [
+        {
+          "type": "NavBar"
+        },
         {
           "variantName": "default",
           "type": "PageHeader",
