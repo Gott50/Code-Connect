@@ -2,12 +2,11 @@ import React from 'react';
 import { NavbarHeader, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 
-
 const NavBar = () => (
-    <Navbar inverse>
+    <Navbar inverse style={ { height: "10%" } }>
 
         <Navbar.Header pullLeft>
-          <Navbar.Brand style={ { fontFamily: 'awesome' } }>
+          <Navbar.Brand style={ { fontFamily: 'awesome', fontSize:'3,7%' } }>
              <a  href="/home">Code Connect</a>
           </Navbar.Brand>
             <Navbar.Toggle />
@@ -21,11 +20,18 @@ const NavBar = () => (
                 <NavItem href="/mentor">
                     Mentor
                 </NavItem>
+                <NavItem href="/projects">
+                    Projects
+                </NavItem>
+                <NavItem href="/about">
+                    about
+                </NavItem>
 
             </Nav>
 
+
             <Nav pullRight>
-                <NavDropdown title="Profil"
+                <NavDropdown title="profile"
                              id="basic-nav-dropdown">
                     <MenuItem href="/yourtasks">
                         Your Tasks

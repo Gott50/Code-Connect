@@ -18,34 +18,6 @@
           },
           "children": [
             {
-              "type": "small",
-              "props": {
-                "style": {}
-              },
-              "children": [],
-              "text": "Welcome to"
-            },
-            {
-              "type": "Tab"
-            },
-            {
-              "variantName": "circle",
-              "type": "Image",
-              "props": {
-                "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png",
-                "rounded": false,
-                "circle": false,
-                "thumbnail": false,
-                "style": {
-                  "width": "100px",
-                  "height": "100px",
-                  "cssFloat": "",
-                  "verticalAlign": "top",
-                  "marginRight": "20px"
-                }
-              }
-            },
-            {
               "type": "span",
               "props": {
                 "style": {
@@ -54,22 +26,6 @@
               },
               "children": [],
               "text": "Code Connect"
-            }
-          ]
-        },
-        {
-          "type": "h3",
-          "props": {
-            "style": {
-              "padding": "1em",
-              "textAlign": "center"
-            }
-          },
-          "children": [
-            {
-              "type": "span",
-              "text": "Do you want to",
-              "props": {}
             }
           ]
         },
@@ -89,10 +45,10 @@
                 {
                   "type": "Col",
                   "props": {
-                    "xs": 6,
-                    "md": 6,
-                    "sm": 6,
-                    "lg": 6
+                    "xs": 5,
+                    "md": 5,
+                    "sm": 5,
+                    "lg": 5
                   },
                   "children": [
                     {
@@ -128,10 +84,36 @@
                 {
                   "type": "Col",
                   "props": {
-                    "xs": 6,
-                    "md": 6,
-                    "sm": 6,
-                    "lg": 6
+                    "xs": 2,
+                    "md": 2,
+                    "sm": 2,
+                    "lg": 2,
+                    "style": {}
+                  },
+                  "children": [
+                    {
+                      "variantName": "circle",
+                      "type": "Image",
+                      "props": {
+                        "src": "https://raw.githubusercontent.com/Gott50/Code-Connect/master/uibuilder/src/client/assets/CClogo.png",
+                        "rounded": false,
+                        "circle": false,
+                        "thumbnail": false,
+                        "style": {
+                          "maxHeight": "200px",
+                          "cssFloat": "center"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "Col",
+                  "props": {
+                    "xs": 5,
+                    "md": 5,
+                    "sm": 5,
+                    "lg": 5
                   },
                   "children": [
                     {
@@ -149,7 +131,7 @@
                             },
                             "block": false,
                             "bsSize": "large",
-                            "disabled": true
+                            "disabled": false
                           },
                           "children": [
                             {
@@ -169,6 +151,22 @@
               "props": {
                 "style": {}
               }
+            }
+          ]
+        },
+        {
+          "type": "h3",
+          "props": {
+            "style": {
+              "padding": "1em",
+              "textAlign": "center"
+            }
+          },
+          "children": [
+            {
+              "type": "span",
+              "text": "Do you want to",
+              "props": {}
             }
           ]
         }
