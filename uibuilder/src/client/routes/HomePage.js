@@ -10,6 +10,7 @@ import { Input } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 import NavBar from '../views/Test/NavBar.jsx';
+import DynamicList from '../views/Test/DynamicList.jsx';
 
 
 class HomePage extends Component {
@@ -90,6 +91,9 @@ class HomePage extends Component {
                 <h3 style={ { padding: '1em', textAlign: 'center' } }
                     params={ this.props.params }
                     location={ this.props.location }><span params={ this.props.params } location={ this.props.location }>Do you want to</span></h3>
+                <DynamicList listData={ [{ id: '12', title: 'Thunder' }, { id: '199', title: 'Thunjhder', content: 'con12hj3' }] }
+                             params={ this.props.params }
+                             location={ this.props.location }></DynamicList>
             </div>
             );
     }

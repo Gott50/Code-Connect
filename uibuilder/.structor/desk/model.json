@@ -169,6 +169,31 @@
               "props": {}
             }
           ]
+        },
+        {
+          "type": "DynamicList",
+          "props": {
+            "listData": [
+              {
+                "id": "12",
+                "title": "Thunder",
+                "content": {
+                  "description": "description",
+                  "platforms": [
+                    "Web"
+                  ],
+                  "languages": [
+                    "JS"
+                  ]
+                }
+              },
+              {
+                "id": "199",
+                "title": "Thunjhder",
+                "content": "con12hj3"
+              }
+            ]
+          }
         }
       ]
     },
