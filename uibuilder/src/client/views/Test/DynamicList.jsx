@@ -6,11 +6,23 @@ import { Panel} from 'react-bootstrap';
 
 import { ListGroup,ListGroupItem,Button} from 'react-bootstrap';
 import { Link } from 'react-router';
-//import {AjaxHandler} from 'AjaxHandler';
+import {AjaxHandler} from './AjaxHandler.js';
 
 
 class DynamicList extends Component {
-
+    makeListGroupItems(item){
+      let listGroupItems;
+        if (item.tasks && item.tasks.length > 0)
+         listGroupItems = item.tasks.map((task,i) => {
+            return (
+              <ListGroupItem  style={{"minHeight":"50px"}}  key={task.id? task.id:i}>
+                <span> {task.id? task.id:i}: {task.name} </span>
+                <Button href={task.link} bsStyle= "success" style={{"cssFloat":"right"}}> contribute </Button>
+              </ListGroupItem>
+            );
+          })
+          return listGroupItems;
+    }
 
     render() {
 
@@ -22,24 +34,13 @@ class DynamicList extends Component {
         if (this.props.listData && this.props.listData.length > 0) {
             panels = this.props.listData.map(item => {
 
-              let listGroupItems;
-                if (item.tasks && item.tasks.length > 0)
-                 listGroupItems = item.tasks.map((task,i) => {
-                    return (
-                      <ListGroupItem  style={{"minHeight":"50px"}}  key={task.id? task.id:i}>
-                        <span> {task.id? task.id:i}: {task.name} </span>
-                        <Button href={task.link} bsStyle= "success" style={{"cssFloat":"right"}}> contribute </Button>
-                      </ListGroupItem>
-                    );
-                  })
-
                 return (
                   <Panel bsStyle="warning" header= {item.title} key={item.id? item.id:i} style={{"fontSize":"25px", "fontFamily":"awesome"}}>
                     <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
                       <span> {item.content.description} </span>
                     <Panel collapsible defaultExpanded bsStyle="success" header= {item.content.numberOfTasks}>
                         <ListGroup style={{"fontSize":"15px"}}>
-                          {listGroupItems}
+                          {this.makeListGroupItems(item)}
                         </ListGroup>
                       </Panel>
                     </dev>
