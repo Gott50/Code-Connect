@@ -182,7 +182,7 @@
                 "id": "12",
                 "title": "Thunder",
                 "link": "http//:link.web",
-                "deskription": "A random Project of the OpenSource",
+                "description": "A random Project of the OpenSource",
                 "tasks": [
                   {
                     "id": "10",

@@ -2,11 +2,15 @@
 import React, { Component, PropTypes } from 'react';
 
 import { Link } from 'react-router';
+import { Grid } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Panel } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 import NavBar from '../views/Test/NavBar.jsx';
-import DynamicList from '../views/Test/DynamicList.jsx';
+import SearchFilter from '../views/Test/SearchFilter.jsx';
 
 
 class Contributor extends Component {
@@ -23,6 +27,35 @@ class Contributor extends Component {
                           location={ this.props.location }>Select your Project</span>
                 </PageHeader>
                 <ListGroup params={ this.props.params } location={ this.props.location }>
+                    <Grid fluid={ true }
+                          params={ this.props.params }
+                          location={ this.props.location }>
+                        <Row params={ this.props.params } location={ this.props.location }>
+                            <Col xs={ 2 }
+                                 md={ 2 }
+                                 sm={ 2 }
+                                 lg={ 2 }
+                                 params={ this.props.params }
+                                 location={ this.props.location }>
+                            <SearchFilter params={ this.props.params } location={ this.props.location }></SearchFilter>
+                            </Col>
+                            <Col xs={ 12 }
+                                 md={ 6 }
+                                 sm={ 12 }
+                                 lg={ 6 }
+                                 params={ this.props.params }
+                                 location={ this.props.location }>
+                            <Panel params={ this.props.params } location={ this.props.location }>
+                                <p params={ this.props.params } location={ this.props.location }>
+                                    <span params={ this.props.params } location={ this.props.location }>Empty Panel</span>
+                                </p>
+                            </Panel>
+                            </Col>
+                        </Row>
+                    </Grid>
+                    <SearchFilter filter={ [{ title: 'Language' }, { title: 'Difficulty' }] }
+                                  params={ this.props.params }
+                                  location={ this.props.location }></SearchFilter>
                     <ListGroupItem href="/opentasks"
                                    params={ this.props.params }
                                    location={ this.props.location }>
@@ -70,9 +103,6 @@ class Contributor extends Component {
                             </tbody>
                         </table>
                     </ListGroupItem>
-                    <DynamicList listData={ [{ id: '12', title: 'Thunder' }, { id: '199', title: 'Thunjhder', content: 'con12hj3' }] }
-                                 params={ this.props.params }
-                                 location={ this.props.location }></DynamicList>
                 </ListGroup>
             </div>
             );

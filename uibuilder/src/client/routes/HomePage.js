@@ -72,7 +72,7 @@ class HomePage extends Component {
                              lg={ 5 }
                              params={ this.props.params }
                              location={ this.props.location }>
-                        <IndexLink to="/ "
+                        <IndexLink to="/mentor"
                                    params={ this.props.params }
                                    location={ this.props.location }>
                             <Button bsStyle="warning"
@@ -91,7 +91,7 @@ class HomePage extends Component {
                 <h3 style={ { padding: '1em', textAlign: 'center' } }
                     params={ this.props.params }
                     location={ this.props.location }><span params={ this.props.params } location={ this.props.location }>newest projects</span></h3>
-                <DynamicList listData={ [{ id: '12', title: 'Thunder' }, { id: '199', title: 'Thunjhder', content: 'con12hj3' }] }
+                <DynamicList projectList={ [{ id: '12', title: 'Thunder', link: 'http//:link.web', description: 'A random Project of the OpenSource' }] }
                              params={ this.props.params }
                              location={ this.props.location }></DynamicList>
             </div>

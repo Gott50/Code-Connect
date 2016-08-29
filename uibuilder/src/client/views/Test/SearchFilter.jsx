@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Panel} from 'react-bootstrap';
 
-import {ListGroup, ListGroupItem, Button, Input} from 'react-bootstrap';
+import {ListGroup, ListGroupItem, Input, FieldGroup} from 'react-bootstrap';
 
 class SearchFilter extends Component {
     makeListGroupItems(filter) {
