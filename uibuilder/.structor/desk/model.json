@@ -63,14 +63,16 @@
                             "bsStyle": "success",
                             "style": {
                               "textAlign": "center",
-                              "cssFloat": "right"
+                              "cssFloat": "right",
+                              "paddingLeft": "6%",
+                              "paddingRight": "%"
                             },
                             "bsSize": "large"
                           },
                           "children": [
                             {
                               "type": "span",
-                              "text": "find a Project to contribute to",
+                              "text": "browse projects",
                               "props": {},
                               "componentName": null
                             }
@@ -127,7 +129,9 @@
                           "props": {
                             "bsStyle": "warning",
                             "style": {
-                              "textAlign": "center"
+                              "textAlign": "center",
+                              "paddingRight": "10%",
+                              "paddingLeft": "10%"
                             },
                             "block": false,
                             "bsSize": "large",
@@ -136,7 +140,7 @@
                           "children": [
                             {
                               "type": "span",
-                              "text": "add your own Project to Mentor",
+                              "text": "      add project",
                               "props": {},
                               "componentName": null
                             }
@@ -165,7 +169,7 @@
           "children": [
             {
               "type": "span",
-              "text": "Do you want to",
+              "text": "newest projects",
               "props": {}
             }
           ]
@@ -184,8 +188,22 @@
                   ],
                   "languages": [
                     "JS"
-                  ]
-                }
+                  ],
+                  "numberOfTasks": "20 Tasks",
+                  "numberOfContributors": "20 Contributors",
+                  "rating": "3/5",
+                  "webAdress": "www.adress.web"
+                },
+                "tasks": [
+                  {
+                    "name": "add Link",
+                    "link": "http//:link.web"
+                  },
+                  {
+                    "name": "add Link2",
+                    "link": "http//:link2.web"
+                  }
+                ]
               },
               {
                 "id": "199",
@@ -360,6 +378,45 @@
                 }
               ],
               "componentName": null
+            },
+            {
+              "type": "DynamicList",
+              "props": {
+                "listData": [
+                  {
+                    "id": "12",
+                    "title": "Thunder",
+                    "content": {
+                      "description": "description",
+                      "platforms": [
+                        "Web"
+                      ],
+                      "languages": [
+                        "JS"
+                      ],
+                      "numberOfTasks": "20 Tasks",
+                      "numberOfContributors": "20 Contributors",
+                      "rating": "3/5",
+                      "webAdress": "www.adress.web"
+                    },
+                    "tasks": [
+                      {
+                        "name": "add Link",
+                        "link": "http//:link.web"
+                      },
+                      {
+                        "name": "add Link2",
+                        "link": "http//:link2.web"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "199",
+                    "title": "Thunjhder",
+                    "content": "con12hj3"
+                  }
+                ]
+              }
             }
           ]
         }

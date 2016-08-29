@@ -1,13 +1,18 @@
 
 import { connect } from 'react-redux';
 import React, { Component, PropTypes } from 'react';
-import { Panel } from 'react-bootstrap';
-import {AjaxHandler} from 'AjaxHandler';
+import { Panel} from 'react-bootstrap';
+
+
+import { ListGroup,ListGroupItem,Button} from 'react-bootstrap';
+import { Link } from 'react-router';
+//import {AjaxHandler} from 'AjaxHandler';
+
 
 class DynamicList extends Component {
 
-    render() {
 
+    render() {
 
         //let listData;
         const {apiTest0X1} = this.props;
@@ -16,16 +21,30 @@ class DynamicList extends Component {
 
         if (this.props.listData && this.props.listData.length > 0) {
             panels = this.props.listData.map(item => {
-                return (
-                    <Panel key={item.id}
-                           header={item.title}>
-                        <pre className="text-left">
-                           <code>
-                              <span>{JSON.stringify(item.content, null, 4)}</span>
-                           </code>
-                        </pre>
-                    </Panel>
+
+              let listGroupItems;
+                if (item.tasks && item.tasks.length > 0)
+                 listGroupItems = item.tasks.map((task,i) => {
+                    return (
+                      <ListGroupItem  style={{"minHeight":"50px"}}  key={task.id? task.id:i}>
+                        <span> {task.id? task.id:i}: {task.name} </span>
+                        <Button href={task.link} bsStyle= "success" style={{"cssFloat":"right"}}> contribute </Button>
+                      </ListGroupItem>
                     );
+                  })
+
+                return (
+                  <Panel bsStyle="warning" header= {item.title} key={item.id? item.id:i} style={{"fontSize":"25px", "fontFamily":"awesome"}}>
+                    <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
+                      <span> {item.content.description} </span>
+                    <Panel collapsible defaultExpanded bsStyle="success" header= {item.content.numberOfTasks}>
+                        <ListGroup style={{"fontSize":"15px"}}>
+                          {listGroupItems}
+                        </ListGroup>
+                      </Panel>
+                    </dev>
+                  </Panel>
+  );
             })
         } else {
             panels = (<Panel header="No listData!"

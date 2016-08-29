@@ -6,6 +6,7 @@ import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 import { PageHeader } from 'react-bootstrap';
 import NavBar from '../views/Test/NavBar.jsx';
+import DynamicList from '../views/Test/DynamicList.jsx';
 
 
 class Contributor extends Component {
@@ -69,6 +70,9 @@ class Contributor extends Component {
                             </tbody>
                         </table>
                     </ListGroupItem>
+                    <DynamicList listData={ [{ id: '12', title: 'Thunder' }, { id: '199', title: 'Thunjhder', content: 'con12hj3' }] }
+                                 params={ this.props.params }
+                                 location={ this.props.location }></DynamicList>
                 </ListGroup>
             </div>
             );

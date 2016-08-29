@@ -43,11 +43,11 @@ class HomePage extends Component {
                                    params={ this.props.params }
                                    location={ this.props.location }>
                             <Button bsStyle="success"
-                                    style={ { textAlign: 'center', cssFloat: 'right' } }
+                                    style={ { textAlign: 'center', cssFloat: 'right', paddingLeft: '6%', paddingRight: '%' } }
                                     bsSize="large"
                                     params={ this.props.params }
                                     location={ this.props.location }>
-                                <span params={ this.props.params } location={ this.props.location }>find a Project to contribute to</span>
+                                <span params={ this.props.params } location={ this.props.location }>browse projects</span>
                             </Button>
                         </IndexLink>
                         </Col>
@@ -76,13 +76,13 @@ class HomePage extends Component {
                                    params={ this.props.params }
                                    location={ this.props.location }>
                             <Button bsStyle="warning"
-                                    style={ { textAlign: 'center' } }
+                                    style={ { textAlign: 'center', paddingRight: '10%', paddingLeft: '10%' } }
                                     block={ false }
                                     bsSize="large"
                                     disabled={ false }
                                     params={ this.props.params }
                                     location={ this.props.location }>
-                                <span params={ this.props.params } location={ this.props.location }>add your own Project to Mentor</span>
+                                <span params={ this.props.params } location={ this.props.location }>add project</span>
                             </Button>
                         </IndexLink>
                         </Col>
@@ -90,7 +90,7 @@ class HomePage extends Component {
                 </Grid>
                 <h3 style={ { padding: '1em', textAlign: 'center' } }
                     params={ this.props.params }
-                    location={ this.props.location }><span params={ this.props.params } location={ this.props.location }>Do you want to</span></h3>
+                    location={ this.props.location }><span params={ this.props.params } location={ this.props.location }>newest projects</span></h3>
                 <DynamicList listData={ [{ id: '12', title: 'Thunder' }, { id: '199', title: 'Thunjhder', content: 'con12hj3' }] }
                              params={ this.props.params }
                              location={ this.props.location }></DynamicList>
