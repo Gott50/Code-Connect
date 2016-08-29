@@ -14,10 +14,11 @@ class DynamicList extends Component {
       let listGroupItems;
         if (item.tasks && item.tasks.length > 0)
          listGroupItems = item.tasks.map((task,i) => {
+           let link = task.link+"/"+task.id;
             return (
               <ListGroupItem  style={{"minHeight":"50px"}}  key={task.id? task.id:i}>
                 <span> {task.id? task.id:i}: {task.name} </span>
-                <Button href={task.link} bsStyle= "success" style={{"cssFloat":"right"}}> contribute </Button>
+                <Button href={link} bsStyle= "success" style={{"cssFloat":"right"}}> contribute </Button>
               </ListGroupItem>
             );
           })
@@ -29,15 +30,17 @@ class DynamicList extends Component {
         //let listData;
         const {apiTest0X1} = this.props;
         console.log(apiTest0X1);
-        let panels;
 
-        if (this.props.listData && this.props.listData.length > 0) {
-            panels = this.props.listData.map(item => {
+        let numberOfTasks= this.props.projectList.tasks.length + " Tasks";
+        let panels;
+        if (this.props.projectList && this.props.projectList.length > 0) {
+            panels = this.props.projectList.map(item => {
                 return (
                   <Panel bsStyle="warning" header= {item.title} key={item.id? item.id:i} style={{"fontSize":"25px", "fontFamily":"awesome"}}>
                     <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
-                      <span> {item.content.description} </span>
-                    <Panel collapsible defaultCollapsed bsStyle="success" header= {item.content.numberOfTasks}>
+                      <span> {item.description} </span>
+                      <span> {item.link} </span>
+                    <Panel collapsible defaultCollapsed bsStyle="success" header= {numberOfTasks}>
                         <ListGroup fill style={{"fontSize":"15px"}}>
                           {this.makeListGroupItems(item)}
                         </ListGroup>

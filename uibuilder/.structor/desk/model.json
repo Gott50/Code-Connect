@@ -177,31 +177,20 @@
         {
           "type": "DynamicList",
           "props": {
-            "listData": [
+            "projectList": [
               {
                 "id": "12",
                 "title": "Thunder",
-                "content": {
-                  "description": "description",
-                  "platforms": [
-                    "Web"
-                  ],
-                  "languages": [
-                    "JS"
-                  ],
-                  "numberOfTasks": "20 Tasks",
-                  "numberOfContributors": "20 Contributors",
-                  "rating": "3/5",
-                  "webAdress": "www.adress.web"
-                },
+                "link": "http//:link.web",
+
                 "tasks": [
                   {
-                    "name": "add Link",
-                    "link": "http//:link.web"
+                    "id":"10",
+                    "name": "add Link"
                   },
                   {
-                    "name": "add Link2",
-                    "link": "http//:link2.web"
+                    "id":"12",
+                    "name": "add Link2"
                   }
                 ]
               },
@@ -267,14 +256,22 @@
                         {
                           "type": "SearchFilter",
                           "props": {
-                            "filter":[
+                            "filter": [
                               {
-                                "title":"Difficulty",
-                                "options":["Beginner","Intermediate","Advanced"]
+                                "title": "Language",
+                                "options": [
+                                  "JavaScript",
+                                  "HTML",
+                                  "CSS"
+                                ]
                               },
                               {
-                                "title":"Type",
-                                "options":["Beginner","Intermediate","Advanced"]
+                                "title": "Difficulty",
+                                "options": [
+                                  "Beginner",
+                                  "Intermediate",
+                                  "Advanced"
+                                ]
                               }
                             ]
                           }
@@ -457,38 +454,22 @@
             {
               "type": "DynamicList",
               "props": {
-                "listData": [
+                "projectList": [
                   {
                     "id": "12",
                     "title": "Thunder",
-                    "content": {
-                      "description": "description",
-                      "platforms": [
-                        "Web"
-                      ],
-                      "languages": [
-                        "JS"
-                      ],
-                      "numberOfTasks": "20 Tasks",
-                      "numberOfContributors": "20 Contributors",
-                      "rating": "3/5",
-                      "webAdress": "www.adress.web"
-                    },
+                    "link": "http//:link2.web",
+                    "description": "description",
                     "tasks": [
                       {
-                        "name": "add Link",
-                        "link": "http//:link.web"
+                        "id":"123",
+                        "name": "add Link"
                       },
                       {
+                        "id":"10",
                         "name": "add Link2",
-                        "link": "http//:link2.web"
                       }
                     ]
-                  },
-                  {
-                    "id": "199",
-                    "title": "Thunjhder",
-                    "content": "con12hj3"
                   }
                 ]
               }
