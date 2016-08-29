@@ -4,7 +4,7 @@ getProjectList()=
                 "id": "12",
                 "title": "Thunder",
                 "link": "http//:link.web",
-              
+              	"description":"A random Project of the OpenSource",
                 "tasks": [
                   {
                     "id":"10",
@@ -16,6 +16,7 @@ getProjectList()=
                   }
                 ]
               }
+			]
 
 
 postSearchFilter()=

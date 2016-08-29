@@ -182,22 +182,17 @@
                 "id": "12",
                 "title": "Thunder",
                 "link": "http//:link.web",
-
+                "deskription": "A random Project of the OpenSource",
                 "tasks": [
                   {
-                    "id":"10",
+                    "id": "10",
                     "name": "add Link"
                   },
                   {
-                    "id":"12",
+                    "id": "12",
                     "name": "add Link2"
                   }
                 ]
-              },
-              {
-                "id": "199",
-                "title": "Thunjhder",
-                "content": "con12hj3"
               }
             ]
           }
@@ -255,26 +250,7 @@
                       "children": [
                         {
                           "type": "SearchFilter",
-                          "props": {
-                            "filter": [
-                              {
-                                "title": "Language",
-                                "options": [
-                                  "JavaScript",
-                                  "HTML",
-                                  "CSS"
-                                ]
-                              },
-                              {
-                                "title": "Difficulty",
-                                "options": [
-                                  "Beginner",
-                                  "Intermediate",
-                                  "Advanced"
-                                ]
-                              }
-                            ]
-                          }
+                          "props": {}
                         }
                       ]
                     },
@@ -314,7 +290,24 @@
             {
               "type": "SearchFilter",
               "props": {
-                "filter": []
+                "filter": [
+                  {
+                    "title": "Language",
+                    "options": [
+                      "JavaScript",
+                      "HTML",
+                      "CSS"
+                    ]
+                  },
+                  {
+                    "title": "Difficulty",
+                    "options": [
+                      "Beginner",
+                      "Intermediate",
+                      "Advanced"
+                    ]
+                  }
+                ]
               }
             },
             {
@@ -450,29 +443,6 @@
                 }
               ],
               "componentName": null
-            },
-            {
-              "type": "DynamicList",
-              "props": {
-                "projectList": [
-                  {
-                    "id": "12",
-                    "title": "Thunder",
-                    "link": "http//:link2.web",
-                    "description": "description",
-                    "tasks": [
-                      {
-                        "id":"123",
-                        "name": "add Link"
-                      },
-                      {
-                        "id":"10",
-                        "name": "add Link2",
-                      }
-                    ]
-                  }
-                ]
-              }
             }
           ]
         }

@@ -14,7 +14,7 @@ class DynamicList extends Component {
       let listGroupItems;
         if (item.tasks && item.tasks.length > 0)
          listGroupItems = item.tasks.map((task,i) => {
-           let link = task.link+"/"+task.id;
+           let link = item.link+"/"+task.id;
             return (
               <ListGroupItem  style={{"minHeight":"50px"}}  key={task.id? task.id:i}>
                 <span> {task.id? task.id:i}: {task.name} </span>
@@ -31,15 +31,14 @@ class DynamicList extends Component {
         const {apiTest0X1} = this.props;
         console.log(apiTest0X1);
 
-        let numberOfTasks= this.props.projectList.tasks.length + " Tasks";
         let panels;
         if (this.props.projectList && this.props.projectList.length > 0) {
             panels = this.props.projectList.map(item => {
+                      let numberOfTasks= item.tasks.length + " Tasks";
                 return (
                   <Panel bsStyle="warning" header= {item.title} key={item.id? item.id:i} style={{"fontSize":"25px", "fontFamily":"awesome"}}>
                     <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
                       <span> {item.description} </span>
-                      <span> {item.link} </span>
                     <Panel collapsible defaultCollapsed bsStyle="success" header= {numberOfTasks}>
                         <ListGroup fill style={{"fontSize":"15px"}}>
                           {this.makeListGroupItems(item)}
