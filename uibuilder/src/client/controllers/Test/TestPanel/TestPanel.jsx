@@ -1,10 +1,12 @@
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
+import {modelSelector} from './selectors.js';
+import {containerActions} from './actions.js';
 
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { modelSelector } from './selectors.js';
-import { containerActions } from './actions.js';
+import {Button, Panel} from 'react-bootstrap';
+var AjaxHandler = require('./AjaxHandler.js');
 
-import { Button , Panel } from 'react-bootstrap';
+
 
 class TestPanel extends Component {
 
@@ -12,25 +14,13 @@ class TestPanel extends Component {
         super(props);
         this.handleOnClick = this.handleOnClick.bind(this);
     }
- handleCommentSubmit() {
-    $.ajax({
-      url: "/hallo",
-      dataType: 'text',
-      type: 'GET',
-      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(url, status, err.toString());
-      }.bind(this)
-    });
-  }
+
 
     handleOnClick(e) {
-        console.log("Ohh, Fuck MAN!");
-
         e.stopPropagation();
         e.preventDefault();
+        AjaxHandler.postTask({"greetings": "hello"});
+        console.log("rewq");
         //
         // actions where bound in containerActions, look at actions.js
         //
@@ -46,15 +36,18 @@ class TestPanel extends Component {
         //
         // taken from modelSelector, look at selectors.js and reducer.js
         //
-        const {model: {arg1, arg2}} = this.props;
+        const {
+            model: {
+                arg1,
+                arg2
+            }
+        } = this.props;
 
         return (
-            <Button bsStyle="default"
-                      onClick={this.handleOnClick}
-                        params={this.props.params}>
-                        <span params={this.props.params}>Toggle header</span>
-                </Button>
-            );
+            <Button bsStyle="default" onClick={this.handleOnClick} params={this.props.params}>
+                <span params={this.props.params}>Toggle header</span>
+            </Button>
+        );
     }
 }
 
