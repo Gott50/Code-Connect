@@ -6,7 +6,7 @@ const NavBar = () => (
     <Navbar inverse style={ { height: "10%" } }>
 
         <Navbar.Header pullLeft>
-          <Navbar.Brand style={ { fontFamily: 'awesome', fontSize:'3,7%' } }>
+          <Navbar.Brand style={ { "fontFamily": 'awesome', "fontSize":'3,7%' } }>
              <a  href="/home">Code Connect</a>
           </Navbar.Brand>
             <Navbar.Toggle />
@@ -14,10 +14,10 @@ const NavBar = () => (
 
         <Navbar.Collapse>
             <Nav pullCenter>
-                <NavItem href="/contributor">
+                <NavItem href="/contributor" bsStyle="success" >
                     Contributer
                 </NavItem>
-                <NavItem href="/mentor">
+                <NavItem href="/mentor" bsStyle="warning">
                     Mentor
                 </NavItem>
                 <NavItem href="/projects">
@@ -31,6 +31,9 @@ const NavBar = () => (
 
 
             <Nav pullRight>
+              <NavItem href="/auth/github">
+                  Login
+              </NavItem>
                 <NavDropdown title="profile"
                              id="basic-nav-dropdown">
                     <MenuItem href="/yourtasks">
@@ -41,7 +44,7 @@ const NavBar = () => (
                     </MenuItem>
 
                     <MenuItem divider />
-                    <MenuItem href="/auth/github"> Login
+                    <MenuItem href="/auth/github"> Logout
                     </MenuItem>
                 </NavDropdown>
             </Nav>

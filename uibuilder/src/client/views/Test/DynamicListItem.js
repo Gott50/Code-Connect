@@ -26,7 +26,7 @@ export default class DynamicListItem extends React.Component {
         <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
           <span> {item.content.description} </span>
         <Panel collapsible defaultExpanded bsStyle="success" header= {item.content.numberOfTasks}>
-            <ListGroup style={{"fontSize":"15px"}}>
+            <ListGroup fill style={{"fontSize":"15px"}}>
               {this.makeListGroupItems(item)}
             </ListGroup>
           </Panel>

@@ -121,7 +121,7 @@
                     {
                       "type": "IndexLink",
                       "props": {
-                        "to": "/ "
+                        "to": "/mentor"
                       },
                       "children": [
                         {
@@ -245,6 +245,81 @@
           "type": "ListGroup",
           "props": {},
           "children": [
+            {
+              "variantName": "2 colums",
+              "type": "Grid",
+              "props": {
+                "fluid": true
+              },
+              "children": [
+                {
+                  "type": "Row",
+                  "children": [
+                    {
+                      "type": "Col",
+                      "props": {
+                        "xs": 2,
+                        "md": 2,
+                        "sm": 2,
+                        "lg": 2
+                      },
+                      "children": [
+                        {
+                          "type": "SearchFilter",
+                          "props": {
+                            "filter":[
+                              {
+                                "title":"Difficulty",
+                                "options":["Beginner","Intermediate","Advanced"]
+                              },
+                              {
+                                "title":"Type",
+                                "options":["Beginner","Intermediate","Advanced"]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "Col",
+                      "props": {
+                        "xs": 12,
+                        "md": 6,
+                        "sm": 12,
+                        "lg": 6
+                      },
+                      "children": [
+                        {
+                          "type": "Panel",
+                          "props": {},
+                          "children": [
+                            {
+                              "type": "p",
+                              "children": [
+                                {
+                                  "type": "span",
+                                  "text": "Empty Panel",
+                                  "props": {}
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "props": {}
+                }
+              ]
+            },
+            {
+              "type": "SearchFilter",
+              "props": {
+                "filter": []
+              }
+            },
             {
               "type": "ListGroupItem",
               "props": {

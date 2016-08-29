@@ -37,6 +37,7 @@ module.exports = {
     Test: {
         TestPanel: require('../../src/client/controllers/Test/TestPanel/TestPanel.jsx'),
         NavBar: require('../../src/client/views/Test/NavBar.jsx'),
-        DynamicList: require('../../src/client/views/Test/DynamicList.jsx')
+        DynamicList: require('../../src/client/views/Test/DynamicList.jsx'),
+        SearchFilter: require('../../src/client/views/Test/SearchFilter.jsx')
     }
 };
