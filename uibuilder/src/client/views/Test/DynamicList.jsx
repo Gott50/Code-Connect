@@ -33,13 +33,12 @@ class DynamicList extends Component {
 
         if (this.props.listData && this.props.listData.length > 0) {
             panels = this.props.listData.map(item => {
-
                 return (
                   <Panel bsStyle="warning" header= {item.title} key={item.id? item.id:i} style={{"fontSize":"25px", "fontFamily":"awesome"}}>
                     <dev style={{"fontSize":"18px", "fontFamily":"Helvetica"}}>
                       <span> {item.content.description} </span>
                     <Panel collapsible defaultExpanded bsStyle="success" header= {item.content.numberOfTasks}>
-                        <ListGroup style={{"fontSize":"15px"}}>
+                        <ListGroup fill style={{"fontSize":"15px"}}>
                           {this.makeListGroupItems(item)}
                         </ListGroup>
                       </Panel>

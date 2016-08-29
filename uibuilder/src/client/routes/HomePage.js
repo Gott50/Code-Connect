@@ -72,7 +72,7 @@ class HomePage extends Component {
                              lg={ 5 }
                              params={ this.props.params }
                              location={ this.props.location }>
-                        <IndexLink to="/mentor"
+                        <IndexLink to="/ "
                                    params={ this.props.params }
                                    location={ this.props.location }>
                             <Button bsStyle="warning"

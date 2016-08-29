@@ -121,7 +121,7 @@
                     {
                       "type": "IndexLink",
                       "props": {
-                        "to": "/mentor"
+                        "to": "/ "
                       },
                       "children": [
                         {

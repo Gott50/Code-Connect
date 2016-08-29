@@ -41,7 +41,7 @@ const NavBar = () => (
                     </MenuItem>
 
                     <MenuItem divider />
-                    <MenuItem> Logout
+                    <MenuItem href="/auth/github"> Login
                     </MenuItem>
                 </NavDropdown>
             </Nav>
