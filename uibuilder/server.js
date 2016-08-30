@@ -24,6 +24,7 @@ var GITHUB_CLIENT_SECRET = "6cd5742c089339bad6d2600fe426350430f37ed0";
 //   and deserialized.
 passport.serializeUser(function(user, done) {
     done(null, user);
+    console.log(user);
 });
 
 passport.deserializeUser(function(obj, done) {
@@ -38,12 +39,13 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GitHubStrategy({
         clientID: GITHUB_CLIENT_ID,
         clientSecret: GITHUB_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/github/callback"
+        callbackURL: "http://127.0.0.1:3000/"
     },
     function(accessToken, refreshToken, profile, done) {
         // asynchronous verification, for effect...
-        process.nextTick(function() {
+        console.log(accessToken);
 
+        process.nextTick(function() {
             // To keep the example simple, the user's GitHub profile is returned to
             // represent the logged-in user.  In a typical application, you would want
             // to associate the GitHub account with a user record in your database,
@@ -99,19 +101,24 @@ app.get('/logout', function(req, res) {
 });
 
 function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/login')
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login')
 }
 
 ////////////////////////////////////////////////////77
 
 ////////////////////////////////////////////////////////
-app.get('/task', function(req, res) {
-    res.send("Task_JSON");
+
+app.get('/projectList', function(req, res) {
+    jsonBild = require('./public/projectList.json')
+    res.json(jsonBild);
 });
 
-app.get('/project', function(req, res) {
-    res.send("Project_JSON");
+app.get('/taskList', function(req, res) {
+    jsonBild = require('./public/taskList.json')
+    res.json(jsonBild);
 });
 
 app.use(bodyParser.urlencoded({

@@ -1,0 +1,15 @@
+"filter": [{
+    "title": "Language",
+    "options": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+    ]
+}, {
+    "title": "Difficulty",
+    "options": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+    ]
+}]
